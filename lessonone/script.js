@@ -4,14 +4,18 @@ var budgetMonth = prompt("Ваш бюджет на месяц?","budget"),
   mainList = {
   	budget:budgetMonth,
  	name:shopName,
- 	shopGoods:['goods1', 'goods2','goods3'],
+ 	shopGoods:[],
  	employers:{},
  	open: false
  }
    
-  for (let i = 0; i < 3; i++) {   
-    let j = mainList.shopGoods[i];
-    confirm(" Какой тип товаров будем продавать? :" +  j);
+ for (let i = 0; i < 3; i++) { 
+  let a = prompt(" Какой тип товаров будем продавать? "); 
+     mainList.shopGoods[i] = a;
+     if((typeof(a)) === 'string' && (typeof(a)) === null && a != '' a.length <50 ){
+     	mainList.shopGood[i] = a;
+     }
+    
 
 }
 
